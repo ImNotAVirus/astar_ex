@@ -27,7 +27,8 @@ defmodule AStar.MixProject do
   defp deps do
     [
       {:rustler, "~> 0.29", optional: true},
-      {:rustler_precompiled, "~> 0.7"}
+      {:rustler_precompiled, "~> 0.7"},
+      {:ex_doc, "~> 0.29", only: :dev, runtime: false}
     ]
   end
 
@@ -37,7 +38,7 @@ defmodule AStar.MixProject do
         "lib",
         "native",
         "mix.exs",
-        "LICENSE",
+        # "LICENSE",
         "checksum-*.exs"
       ],
       licenses: ["MIT"],
